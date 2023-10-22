@@ -26,7 +26,7 @@ printf("Please enter valid positive values for all inputs.\n");
     double monthlyRateOfInflation = pow(1.0 + annualRateInflation, 1.0 / 12.0) - 1;
     double totalInterestEarned = 0;
     double totalNestEgg = initialBalance;
-    
+
    printf("Month  Interest  Balance\n");
     for (int month = 1; month <= yearsUntilRetirement; month++)
       {
@@ -40,3 +40,25 @@ printf("Please enter valid positive values for all inputs.\n");
 
      return 0;
 }
+
+
+/*
+OUTPUT:
+PS D:\LABWORK\Hack4\Hack4> .\a.exe
+Usage: D:\LABWORK\Hack4\Hack4\a.exe <Starting Balance> <Monthly Contribution> <Annual Rate of Return> <Annual Rate of Inflation> <Years until Retirement>
+PS D:\LABWORK\Hack4\Hack4> .\a.exe 10000 500 0.09 0.012 10
+Month  Interest  Balance
+    1 $      0.00 $  10500.00
+    2 $      0.00 $  11000.00
+    3 $      0.00 $  11500.00
+    4 $      0.00 $  12000.00
+    5 $      0.00 $  12500.00
+    6 $      0.00 $  13000.00
+    7 $      0.00 $  13500.00
+    8 $      0.00 $  14000.00
+    9 $      0.00 $  14500.00
+   10 $      0.00 $  15000.00
+Total Interest Earned $      0.00
+Total Nest Egg $  15000.00
+
+*/
