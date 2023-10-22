@@ -22,4 +22,21 @@ printf("Please enter valid positive values for all inputs.\n");
     }
 
 
+    double monthlyRateReturn = pow(1 + annualRateReturn, 1/12)-1;
+    double monthlyRateOfInflation = pow(1.0 + annualRateInflation, 1.0 / 12.0) - 1;
+    double totalInterestEarned = 0;
+    double totalNestEgg = initialBalance;
     
+   printf("Month  Interest  Balance\n");
+    for (int month = 1; month <= yearsUntilRetirement; month++)
+      {
+     double monthlyInterest = totalNestEgg * monthlyRateReturn;
+      totalInterestEarned += monthlyInterest;
+        totalNestEgg += monthlyInterest + monthlyContribution;
+        printf("%5d $%10.2lf $%10.2lf\n", month, monthlyInterest, totalNestEgg);
+         }
+    printf("Total Interest Earned $%10.2lf\n", totalInterestEarned);
+    printf("Total Nest Egg $%10.2lf\n", totalNestEgg);
+
+     return 0;
+}
