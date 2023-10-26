@@ -9,7 +9,7 @@ int main(int argc , char *argv[])
         printf("Usage: %s <Starting Balance> <Monthly Contribution> <Annual Rate of Return> <Annual Rate of Inflation> <Years until Retirement>\n", argv[0]);
         return 1;
     }
-     double initialBalance = atof(argv[1]);
+    
      double monthlyContribution = atof(argv[2]);
      double annualRateReturn = atof(argv[3]);
      double annualRateInflation  = atof(argv[4]);
